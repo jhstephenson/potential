@@ -1,0 +1,2 @@
+module SocioCulturalFactorsHelper
+end

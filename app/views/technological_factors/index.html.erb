@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Technological Factors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Factor</th>
+      <th>Opportunity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @technological_factors.each do |technological_factor| %>
+      <tr>
+        <td><%= technological_factor.factor %></td>
+        <td><%= technological_factor.opportunity %></td>
+        <td><%= link_to 'Show', technological_factor %></td>
+        <td><%= link_to 'Edit', edit_technological_factor_path(technological_factor) %></td>
+        <td><%= link_to 'Destroy', technological_factor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Technological factor', new_technological_factor_path %>

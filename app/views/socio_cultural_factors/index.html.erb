@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Socio Cultural Factors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Factor</th>
+      <th>Opportunity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @socio_cultural_factors.each do |socio_cultural_factor| %>
+      <tr>
+        <td><%= socio_cultural_factor.factor %></td>
+        <td><%= socio_cultural_factor.opportunity %></td>
+        <td><%= link_to 'Show', socio_cultural_factor %></td>
+        <td><%= link_to 'Edit', edit_socio_cultural_factor_path(socio_cultural_factor) %></td>
+        <td><%= link_to 'Destroy', socio_cultural_factor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Socio cultural factor', new_socio_cultural_factor_path %>

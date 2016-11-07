@@ -1,0 +1,21 @@
+<%= form_for(@strength_opportunity) do |f| %>
+  <% if @strength_opportunity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@strength_opportunity.errors.count, "error") %> prohibited this strength_opportunity from being saved:</h2>
+
+      <ul>
+      <% @strength_opportunity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :opportunity %><br>
+    <%= f.text_field :opportunity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Other Opportunities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opportunity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @other_opportunities.each do |other_opportunity| %>
+      <tr>
+        <td><%= other_opportunity.opportunity %></td>
+        <td><%= link_to 'Show', other_opportunity %></td>
+        <td><%= link_to 'Edit', edit_other_opportunity_path(other_opportunity) %></td>
+        <td><%= link_to 'Destroy', other_opportunity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Other opportunity', new_other_opportunity_path %>

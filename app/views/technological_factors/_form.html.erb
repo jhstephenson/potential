@@ -1,0 +1,25 @@
+<%= form_for(@technological_factor) do |f| %>
+  <% if @technological_factor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@technological_factor.errors.count, "error") %> prohibited this technological_factor from being saved:</h2>
+
+      <ul>
+      <% @technological_factor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :factor %><br>
+    <%= f.text_field :factor %>
+  </div>
+  <div class="field">
+    <%= f.label :opportunity %><br>
+    <%= f.text_field :opportunity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
